@@ -1,0 +1,12 @@
+-- Create these as separate measures on the machine_observations table.
+-- The table contains observations, not distinct physical machines.
+Total Observations = COUNTROWS(machine_observations)
+Failure Count = SUM(machine_observations[machine_failure])
+Non-Failure Count = [Total Observations] - [Failure Count]
+Failure Rate = DIVIDE([Failure Count], [Total Observations], 0)
+Average Air Temperature (K) = AVERAGE(machine_observations[air_temperature_k])
+Average Process Temperature (K) = AVERAGE(machine_observations[process_temperature_k])
+Average Rotational Speed (rpm) = AVERAGE(machine_observations[rotational_speed_rpm])
+Average Torque (Nm) = AVERAGE(machine_observations[torque_nm])
+Average Tool Wear (min) = AVERAGE(machine_observations[tool_wear_min])
+-- Optional labels only: no count of unique machines is scientifically defensible.

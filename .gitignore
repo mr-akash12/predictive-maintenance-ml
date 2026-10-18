@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+.vscode/
+*.log
+artifacts/*.joblib
+artifacts/*.json
+reports/figures/*.png
+data/processed/*.csv
+data/processed/*.db
+data/processed/*.db-*
+*.pbix
